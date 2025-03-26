@@ -33,7 +33,7 @@ app.get('/users', async (req, res) => {
         users=await User.find();
     }
     else{
-        users= await User.findOne(username);
+        users= await User.findOne({username:"user"});
     }
     console.log(users);
   setTimeout(()=>{
